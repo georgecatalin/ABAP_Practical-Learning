@@ -46,3 +46,16 @@ IF lv_string_np_3 NP lv_string_np_4.
 ELSE.
   WRITE: / lv_string_np_5, 'NP', lv_string_np_6, '= FALSE and sy-fdpos=', sy-fdpos . " the offset of the first match from string 2 in string 1
 ENDIF.
+
+ULINE.
+WRITE: / 'Compare two strings using NP and show the use of # to escape special characters ->example returns FALSE'.
+WRITE: / .
+
+DATA: lv_string_np_7 TYPE string VALUE 'System Applicatio+n Product',
+      lv_string_np_8 TYPE string VALUE '*Applicatio#+n*'.
+
+IF lv_string_np_7 NP lv_string_np_8.
+  WRITE: / lv_string_np_7, 'NP', lv_string_np_8, '= TRUE and sy-fdpos=', sy-fdpos . " sy-fdpos= length of the first string
+ELSE.
+  WRITE: / lv_string_np_7, 'NP', lv_string_np_8, '= FALSE and sy-fdpos=', sy-fdpos . " the offset of the first match from string 2 in string 1
+ENDIF.

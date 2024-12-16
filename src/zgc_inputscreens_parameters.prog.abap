@@ -9,7 +9,7 @@ REPORT zgc_inputscreens_parameters.
 
 * Parameters are used to pass single values to a program.
 
-PARAMETERS p_ono TYPE vbeln DEFAULT 120.
+PARAMETERS p_ono TYPE vbeln DEFAULT 120. " parameter object names can only have up to including 8 characters
 
 PARAMETERS p_ono_1 TYPE vbeln OBLIGATORY.
 

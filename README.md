@@ -8,5 +8,5 @@ Topics to cover:
 * understand the types of internal tables: standard, sorted and hashed
 * understand the difference between internal tables with header lines (obsolete as of now) and internal tables without header lines.
 * using selection screens (input screens) with parameters and screen-options
-
+* using screen blocks and understanding the internal table behind the select-options
 <img src="sap_logo.png" alt="SAP Logo" width="100">

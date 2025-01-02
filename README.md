@@ -10,4 +10,5 @@ Topics to cover:
 * using selection screens (input screens) with parameters and screen-options
 * using screen blocks and understanding the internal table behind the select-options
 * using sy-uline and sy-vline system variables to draw boundaries of the tables in classic reports style
+* use best performance guidelines with ABAP Programming (e.g. parallel cursors when dealing with nested loops)
 <img src="sap_logo.png" alt="SAP Logo" width="100">

@@ -4,7 +4,7 @@
 *& Author: George Calin
 *& Description: Classic Report with INNER JOIN
 *&---------------------------------------------------------------------*
-REPORT zgc_clsrpt_innerjoin_txtsym.
+REPORT zgc_message_classes.
 
 DATA: lv_ono TYPE zgcdeono_1.
 SELECT-OPTIONS: s_ono FOR lv_ono.
@@ -32,27 +32,13 @@ START-OF-SELECTION.
     INTO TABLE @lt_final
     WHERE header~ordernumber IN @s_ono.
 
-WRITE: / sy-uline(79).
+  IF sy-subrc <> 0.
+   MESSAGE E000(ZMSG_2). " Program ceases to execute at this point, it has to be reopened to input valid data
+ENDIF.
 
-WRITE: / sy-vline,  text-000 ,
-              14  sy-vline,  text-001 ,
-              26 sy-vline, text-002 ,
-              40 sy-vline,  text-003 ,
-              50 sy-vline, text-003 ,
-              60 sy-vline, text-004,
-              77 sy-vline .
-
-WRITE: / sy-uline(79).
+WRITE: / 'Order Number', 14 'Order Date', 26 'Payment Mode', 40 'Currency', 50 'Order Item Number',  60 'Item Cost'.
 
   LOOP AT lt_final INTO ls_final.
-    WRITE: / sy-vline, |{ ls_final-ordernumber ALPHA = OUT }| UNDER text-000,
-                   14 sy-vline, ls_final-orderdate UNDER text-001 ,
-                   26 sy-vline,  ls_final-paymentmode UNDER text-002,
-                   40 sy-vline, ls_final-currency UNDER text-003,
-                   50 sy-vline, ls_final-orderitemnumber UNDER text-004,
-                   60 sy-vline, ls_final-itemcost UNDER text-005,
-                   77 sy-vline.
-
-    WRITE: / sy-uline(79).
-
+    WRITE: / |{ ls_final-ordernumber ALPHA = OUT }| UNDER 'Order Number', ls_final-orderdate UNDER 'Order Date' , ls_final-paymentmode UNDER 'Payment Mode',
+         ls_final-currency UNDER 'Currency', ls_final-orderitemnumber UNDER 'Order Item Number', ls_final-itemcost UNDER 'Item Cost'.
   ENDLOOP.

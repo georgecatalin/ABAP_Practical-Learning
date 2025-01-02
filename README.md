@@ -9,4 +9,5 @@ Topics to cover:
 * understand the difference between internal tables with header lines (obsolete as of now) and internal tables without header lines.
 * using selection screens (input screens) with parameters and screen-options
 * using screen blocks and understanding the internal table behind the select-options
+* using sy-uline and sy-vline system variables to draw boundaries of the tables in classic reports style
 <img src="sap_logo.png" alt="SAP Logo" width="100">

@@ -11,5 +11,5 @@ Topics to cover:
 * using screen blocks and understanding the internal table behind the select-options
 * using sy-uline and sy-vline system variables to draw boundaries of the tables in classic reports style
 * use best performance guidelines with ABAP Programming (e.g. parallel cursors when dealing with nested loops)
-* using events in classic reports of ABAP
+* using events in classic reports of ABAP :  INITIALIZATION, AT SELECTION-SCREEN OUTPUT, AT SELECTION SCREEN, START-OF-SELECTION, TOP-OF-PAGE, END-OF-PAGE, END-OF-SELECTION.
 <img src="sap_logo.png" alt="SAP Logo" width="100">

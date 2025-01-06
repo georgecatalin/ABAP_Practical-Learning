@@ -14,11 +14,12 @@ Topics to cover:
 * using events in classic reports of ABAP :
   * INITIALIZATION,
   * AT SELECTION-SCREEN OUTPUT,
-  *  AT SELECTION SCREEN,
+  *  AT SELECTION-SCREEN,
   *   START-OF-SELECTION,
   *   TOP-OF-PAGE,
   *   END-OF-PAGE,
   *   END-OF-SELECTION.
   *   AT SELECTION-SCREEN ON VALUE REQUEST FOR <FIELD>.
   *   AT SELECTION-SCREEN ON HELP REQUEST FOR <FIELD>.
+  *   AT SELECTION-SCREEN ON <FIELD>.
 <img src="sap_logo.png" alt="SAP Logo" width="100">

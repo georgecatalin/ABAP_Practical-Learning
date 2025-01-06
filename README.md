@@ -20,4 +20,5 @@ Topics to cover:
   *   END-OF-PAGE,
   *   END-OF-SELECTION.
   *   AT SELECTION-SCREEN ON VALUE REQUEST FOR <FIELD>.
+  *   AT SELECTION-SCREEN ON HELP REQUEST FOR <FIELD>.
 <img src="sap_logo.png" alt="SAP Logo" width="100">

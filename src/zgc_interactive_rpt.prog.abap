@@ -38,12 +38,18 @@ START-OF-SELECTION.
 
   LOOP AT lt_data INTO ls_data.
     WRITE: / |{ ls_data-ordernumber ALPHA = OUT }|, ls_data-orderdate, ls_data-paymentmode, ls_data-currency.
+  " use the following line in case you use saving the lines in the HIDE memory area
+    HIDE:  ls_data-ordernumber, ls_data-orderdate, ls_data-paymentmode, ls_data-currency.
+" *********************************
   ENDLOOP.
 
  AT LINE-SELECTION.
 
- SELECT ordernumber, orderitemnumber, itemdescription, itemcost FROM zgcorderi_1 INTO TABLE @lt_data1
-   WHERE ordernumber = @sy-lisel+0(13).
+* SELECT ordernumber, orderitemnumber, itemdescription, itemcost FROM zgcorderi_1 INTO TABLE @lt_data1
+*   WHERE ordernumber = @sy-lisel+0(13).
+
+SELECT ordernumber, orderitemnumber, itemdescription, itemcost FROM zgcorderi_1 INTO TABLE @lt_data1
+WHERE ordernumber = @ls_data-ordernumber.
 
   LOOP AT lt_data1 INTO ls_data1.
     WRITE: / |{ ls_data1-ordernumber ALPHA = OUT }|, ls_data1-orderitemnumber, ls_data1-itemdescription, ls_data1-itemcost.

@@ -24,4 +24,5 @@ Topics to cover:
   *   AT SELECTION-SCREEN ON <FIELD>.
  * creating interactive classic reports and the use of events:
     * AT LINE SELECTION
+ * how to use field symbols with data objects in ABAP
 <img src="sap_logo.png" alt="SAP Logo" width="100">
